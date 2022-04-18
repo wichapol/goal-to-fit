@@ -1,0 +1,69 @@
+.block-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: none;
+  box-sizing: border-box;
+  width: 25%;
+  gap: 5px;
+
+}
+
+
+
+.button-icon {
+  background-color: transparent;
+  border: none;
+  border-radius: 30%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
+  box-shadow: rgba(27, 26, 26, 0.2) 0px 2px 8px 0px;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  position: relative;
+
+}
+
+.button-icon:hover {
+  border: 2px solid var(--primary-text-color);
+  box-shadow: var(--primary-text-color) 0px 5px 8px;
+  box-shadow: var(--primary-text-color) 0px 2px 8px 0px;
+}
+
+.button-icon:focus {
+  border: 2px solid var(--primary-text-color);
+  box-shadow: var(--primary-text-color) 0px 5px 8px;
+  box-shadow: var(--primary-text-color) 0px 2px 8px 0px;
+
+  outline: none;
+}
+
+.button-icon button:focus {
+  outline: none;
+  outline: none;
+}
+
+
+.icon:hover,
+.icon-name :hover {
+  border: none;
+  box-shadow: none;
+}
+
+
+.icon {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  opacity: 60%;
+}
+
+.act-type {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  opacity: 60%;
+  filter: brightness(1);   
+}
+

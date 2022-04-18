@@ -1,0 +1,48 @@
+/** close button */
+#btn-close {
+    border-style: none;
+    background-color: #f85f6a;
+    color: #f6f6f6;
+    width: 25%;
+    box-shadow: 0px 7px 10px 5px rgba(248, 95, 105, 0.2);
+    transition: 0.5s;
+  }
+  #btn-close:hover {
+    border-style: none;
+    background-color: #f85f6a;
+    color: #f6f6f6;
+    width: 25%;
+    box-shadow: 0px 0px 0px 0px rgba(248, 95, 105, 0.4);
+    transition: 0.5s;
+  }
+  #btn-close:active {
+    border-style: none;
+    background-color: #f6f6f6;
+    color: #f85f6a;
+    width: 25%;
+    transition: 0.2s;
+  }
+
+/** Dialog */
+
+.modal-background {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(10, 10, 10, 0.86);
+  }
+  
+  .modal-card {
+    padding: 25px 50px 0px 50px;
+    margin: auto;
+    display: block;
+    width: 50%;
+    height: 70%;
+    background-color: rgb(253, 253, 253);
+    border-radius: 5px;
+  }
+  #services-dialog{
+    overflow-y: scroll;
+   }

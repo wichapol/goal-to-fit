@@ -1,0 +1,191 @@
+/* css ในไฟล์นี้ เป็น Template การจัดวางของ Navbar และ Footer */
+/* และ กำหนด ขนาด ของ ฟอนต์ที่ใช้เท่านั้น */
+/* วิธีใช้ ขนาด ฟอนต์ ใช้คล้ายๆ Bootstrap คือ ดูชื่อคลาส และ ใส่ คลาสที่ html tag นั้น */
+/* เช่น */
+/* ต้องการให้ font
+/* ตัวหนึ่งมีความหนา ใช้คลาส bolder-font
+/* และ มีขนาดใหญ่เป็น title ใช้คลาส font-head */
+
+/* html จะเป็นแบบนี้ */
+/* 
+<div class="bolder-font font-head"> <<<<< เพิ่ม class เข้าไปแบบ Bootstrap
+    Text here
+</div>
+*/
+
+/* คลาส template หลัก จะอยู่ใน comment */
+
+/* สำหรับการตกแต่งอื่นๆ ให้ปรับแต่งที่ ไฟล์ css ไฟล์อื่น */
+/* สำหรับไฟล์นี้จะใช้ทุกคน ฉะนั้น หากมีคนใดคนหนึ่งปรับแต่ง */
+/* คนอื่นต้องปรับแต่งด้วย เพราะต้องมี template เหมือนกัน */
+
+/* หากต้องการเพิ่มหรือแก้ไขให้เหมาะสมขึ้น สามารถทำได้ และแจ้งให้ทุกคนทราบด้วย */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,500;1,900&display=swap');
+
+:root{
+    --primary-background-color: #f6f6f6;
+
+    --primary-text-color: #f85f6a;
+    --secondary-text-color: #929292;
+    --third--text-color:  #a9b3bb;
+
+    --primary-navfooter-color: #929292;
+    --secondary-navfooter-color: #d7d7d7;
+
+    --donut-chart-color-1: #f85f6a;
+    --donut-chart-color-2: #5e6af7;
+    --donut-chart-color-3: #7ce3ae;
+    --graph-chart-color-1: #ffa1a7;
+    --graph-chart-color-2: #afb6ff;
+    --graph-chart-color-3: #bfffde;
+
+    --primary-button-color: #72bb52;
+    --secondary-button-color: #ca0000;
+
+    --primary-icon-color: #272727;
+    --secondary-icon-color: #9c9c9c;
+    
+    --primary-button-meal: #c0c0c0;
+
+    --welldone: rgb(60, 240, 0);
+    --fair: rgb(255, 200, 0);
+    --try: rgb(255, 55, 0);
+}
+/*
+วิธีใช้
+li{
+    color: var(--primary-text-color);
+}
+*/
+
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------------------MAIN TEMPLATE---------------------------- */
+/* สีหลัก รอง ของ ข้อความ และ ไอคอน */
+.primary-text-color{
+    color: var(--primary-text-color);
+}
+.secondary-text-color{
+    color: var(--secondary-text-color);
+}
+.third--text-color{
+    color: var(--third--text-color);
+}
+.primary-icon-color{
+    color: var(--primary-icon-color);
+}
+.secondary-icon-color{
+    color: var(--secondary-icon-color);
+}
+/* สีหลัก รอง ของ ข้อความ และ ไอคอน */
+
+.primary-button-color{
+    color: var(--primary-button-color);
+    filter:drop-shadow(3px 1px 4px  #58ff37);
+    
+}
+.secondary-button-color{
+    color: #ff9800;
+    filter:drop-shadow(3px 1px 4px #ff9800);
+}
+
+
+/* ตัวอักษร บาง หนา */
+.regular-font{
+    font-weight: 300;
+}
+.middle-font{
+    font-weight: 500;
+}
+.bolder-font{
+    font-weight: 900;
+}
+/* ตัวอักษร บาง หนา */
+
+
+
+/* font size */
+.font-large-head{
+    font-size: 1.5em;
+}
+.font-large-subhead{
+    font-size: 1em;
+}
+.font-large-detail{
+    font-size: 1em;
+}
+.font-small-head{
+    font-size: .9em;
+}
+.font-small-subhead{
+    font-size: .8em;
+}
+.font-small-detail{
+    font-size: .8em;
+}
+/* font size */
+/* ----------------------------MAIN TEMPLATE---------------------------- */
+
+
+a{
+    display: block;
+    text-decoration: none !important;
+    color: var(--secondary-text-color);
+}
+body{
+    font-family: Roboto, sans-serif;
+    height: 100%;
+    /* background-color: var(--primary-background-color); */
+    
+}
+
+/* nav::after{ เส้นใต้ nav
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+    border-top: 1px solid lightgray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+} */
+
+/* input{
+    background-color: var(--primary-background-color);
+} */
+
+
+
+
+
+/* menu hover end */
+/* menu end */
+
+
+/* section start */
+/* section{
+    margin: 40px 0;
+} */
+/* section end */
+
+
+
+/* footer start */
+.wrapper{
+    min-height: 100vh;
+    margin-bottom: -60px;
+}
+footer,
+.push {
+    height: 50px;
+}
+footer{
+    width: 100%;
+    font-size: .9em;
+    /* font-weight: 300; */
+}
+/* footer end */

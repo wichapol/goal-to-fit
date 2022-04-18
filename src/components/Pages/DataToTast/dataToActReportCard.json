@@ -1,0 +1,93 @@
+[
+    {
+        "id": "1",
+        "image": "running-activity",
+        "src": "./img/icon/run.png",
+        "actName": "Running",
+        "type":"outdoor",
+        "actDate": "19/02/22",
+        "quantity": "2 / 10 km",
+        "duration": "1:05:19 hrs"
+    },{
+        "id": "2",
+        "image": "bicycle-activity",
+        "src": "./img/icon/bicycle.png",
+        "actName": "Bicycle",
+        "type":"outdoor",
+        "actDate": "20/02/22",
+        "quantity": "20 / 20 km",
+        "duration": "2:05:19 hrs"
+    },{
+        "id": "3",
+        "image": "basketball-activity",
+        "src": "./img/icon/basketball.png",
+        "actName": "Basketball",
+        "type":"outdoor",
+        "actDate": "20/02/22",
+        "quantity": "500 cal",
+        "duration": "1:00:00 hrs"
+    },{
+        "id": "4",
+        "image": "badminton-activity",
+        "src": "./img/icon/indoor/badminton.png",
+        "actName": "Badminton",
+        "type":"indoor",
+        "actDate": "21/02/22",
+        "quantity": "600 cal",
+        "duration": "1:30:00 hrs"
+    },{
+        "id": "5",
+        "image": "yoga-activity",
+        "src": "./img/icon/indoor/yoga.png",
+        "actName": "Yoga",
+        "type":"indoor",
+        "actDate": "24/02/22",
+        "quantity": "350 cal",
+        "duration": "1:30:00 hrs"
+    },{
+        "id": "6",
+        "image": "hula-hoop",
+        "src": "./img/icon/hula-hoop.png",
+        "actName": "hula-hoop",
+        "type":"outdoor",
+        "actDate": "22/02/22",
+        "quantity": "150 cal",
+        "duration": "00:45:00 hrs"
+    },{
+        "id": "7",
+        "image": "kayak",
+        "src": "./img/icon/kayak.png",
+        "actName": "Kayak",
+        "type":"outdoor",
+        "actDate": "24/02/22",
+        "quantity": "20 / 20 km",
+        "duration": "3:00:19 hrs"
+    },{
+        "id": "8",
+        "image": "run",
+        "src": "./img/icon/indoor/run.png",
+        "actName": "Running",
+        "type":"indoor",
+        "actDate": "25/02/22",
+        "quantity": "500 cal",
+        "duration": "1:30:00 hrs"
+    },{
+        "id": "9",
+        "image": "badminton",
+        "src": "./img/icon/indoor/badminton.png",
+        "actName": "Badminton",
+        "type":"indoor",
+        "actDate": "26/02/22",
+        "quantity": "400 cal",
+        "duration": "1:00:00 hrs"
+    },{
+        "id": "10",
+        "image": "bodyweigh",
+        "src": "./img/icon/indoor/bodyweight.png",
+        "actName": "Bodyweight",
+        "type":"indoor",
+        "actDate": "27/02/22",
+        "quantity": "350 cal",
+        "duration": "1:30:00 hrs"
+    }
+]

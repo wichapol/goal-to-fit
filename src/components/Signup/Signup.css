@@ -1,0 +1,49 @@
+.head-signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 120px ;
+    /* border: 2px solid rgb(47, 0, 255); */
+}
+
+.signup-section{
+    /* border: 2px solid rgb(4, 110, 13); */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containe-signup input[type="email"], input[type="password"], input[type="tel"]{
+    /* font-family: 'Outfit', sans-serif; */
+    padding: 0.5rem 0rem;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid #9c9c9c;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px; */
+    outline: none;
+}
+
+
+.containe-signup{    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    max-width: 400px;
+    margin: 0px 0px;
+    /* position: relative; */
+    /* border: 2px solid red; */
+  }
+
+  .singup{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items:flex-start; */
+    /* border: 2px solid rgb(47, 0, 255); */
+    /* padding: 0px 50px; */
+    margin-top: 20px;
+
+}

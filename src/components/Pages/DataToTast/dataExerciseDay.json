@@ -1,0 +1,37 @@
+[
+    {
+        "name": "monday",
+        "value": "1",
+        "children": "M"
+    },
+    {
+        "name": "tuesday",
+        "value": "2",
+        "children": "TU"
+    },
+    {
+        "name": "wednesday",
+        "value": "3",
+        "children": "W"
+    },
+    {
+        "name": "thursday",
+        "value": "4",
+        "children": "TH"
+    },
+    {
+        "name": "friday",
+        "value": "5",
+        "children": "F"
+    },
+    {
+        "name": "saturday",
+        "value": "6",
+        "children": "SA"
+    },
+    {
+        "name": "sunday",
+        "value": "0",
+        "children": "SU"
+    }
+]

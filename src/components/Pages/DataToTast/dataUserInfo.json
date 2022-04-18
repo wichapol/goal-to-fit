@@ -1,0 +1,26 @@
+[
+    {
+        "id": 220413010202,
+        "image": "profile image",
+        "src": "./img/gtf-logo.png",
+        "userName": "John Doe",
+        "weigth": [
+            "Weigth",
+            100,
+            95,
+            90
+        ],
+        "BMI": [
+            "BMI",
+            34,
+            32,
+            30
+        ],
+        "duration": [
+            "Duration",
+            150,
+            92,
+            58
+        ]
+    }
+]

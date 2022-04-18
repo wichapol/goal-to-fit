@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name":"Run",
+      "src":"./img/gtf-logo.png"
+    }, {
+      "id": 2,
+      "name":"Walk",
+      "src":"./img/gtf-logo.png"
+    }, {
+      "id": 3,
+      "name":"Bikking",
+      "src":"./img/gtf-logo.png"
+    }, {
+      "id": 4,
+      "name":"Swimming",
+      "src":"./img/gtf-logo.png"
+    }, {
+      "id": 5,
+      "name":"Pushups",
+      "src":"./img/gtf-logo.png"
+    }, {
+      "id": 6,
+      "name":"Hula hoop",
+      "src":"./img/gtf-logo.png"
+    },{
+      "id": 7,
+      "name":"Hula hoop",
+      "src":"./img/gtf-logo.png"
+    },{
+      "id": 8,
+      "name":"Hula hoop",
+      "src":"./img/gtf-logo.png"
+    },{
+      "id": 9,
+      "name":"Hula hoop",
+      "src":"./img/gtf-logo.png"
+    },{
+      "id": 10,
+      "name":"Hula hoop",
+      "src":"./img/gtf-logo.png"
+    },{
+      "id": 11,
+      "name":"Hula hoop",
+      "src":"./img/gtf-logo.png"
+    },{
+      "id": 12,
+      "name":"Hula hoop",
+      "src":"./img/gtf-logo.png"
+    }
+
+]
+  

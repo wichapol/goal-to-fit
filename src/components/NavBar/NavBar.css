@@ -1,0 +1,90 @@
+/* * {
+    border: 1px solid red;
+} */
+
+section {
+    margin: 0px;
+}
+
+hr{
+    margin: 0px;
+}
+
+.nav-header{
+    padding-top: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.head-title,
+.head-title:visited,
+.menu-link,
+.menu-link:visited{
+    color: var(--secondary-text-color);
+}
+.head-title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2em;
+}
+.head-title h2{
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+.head-title img{
+    margin-bottom: 0;
+    margin-left: 10px;
+    width: 48px;
+    height: 48px;
+}
+
+/* menu start */
+.menu-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0; /* reset margin ของ boostrap ใน tag ul */
+}
+
+.menu-list{
+    list-style: none;
+    margin-left: 10px;
+}
+.menu-link{
+    font-size: .9em;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    color: var(--secondary-text-color);
+}
+.menu-link.btn-logout{
+    color: var(--primary-text-color);
+}
+.menu-name{
+    margin: 0 5px; /* reset margin-bottom ของ boostrap ใน tag p */
+    width: 100%;
+    margin-top: 1px;
+    text-align: center;
+}
+
+/* menu hover start */
+.menu-list:hover .menu-name{
+    font-weight: 500;
+}
+
+
+
+.nav-bar{
+    height: 60px;
+}
+
+.nav-bar-item{
+    height: 100%;
+}
+
+

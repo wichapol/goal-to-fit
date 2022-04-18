@@ -1,0 +1,20 @@
+/* * {
+    border: 1px solid red;
+} */
+
+section {
+    margin: 0px;
+}
+
+hr{
+    margin: 0px;
+}
+
+.nav-bar{
+    height: 60px;
+}
+
+.nav-bar-item{
+    height: 100%;
+}
+

@@ -1,0 +1,15 @@
+/* footer start */
+.wrapper{
+    min-height: 100vh;
+    margin-bottom: -60px;
+}
+footer,
+.push {
+    height: 50px;
+}
+footer{
+    width: 100%;
+    font-size: .9em;
+    /* font-weight: 300; */
+}
+/* footer end */

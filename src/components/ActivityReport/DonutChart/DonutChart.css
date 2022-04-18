@@ -1,0 +1,85 @@
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+#donut {
+    padding: 0 0;
+}
+
+#donut .card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px -5px rgb(0 0 0 / 15%);
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+#donut .card-body .circle-chart-day-circle,
+#donut .card-body .circle-chart-week-circle,
+#donut .card-body .circle-chart-year-circle {
+    animation: circle-chart-fill 2s reverse;
+    /* 1 */
+    transform: rotate(-90deg);
+    /* 2, 3 */
+    transform-origin: center;
+    /* 4 */
+}
+
+#donut .card-body .circle-chart-day-circle-negative,
+#donut .card-body .circle-chart-week-circle-negative,
+#donut .card-body .circle-chart-year-circle-negative {
+    transform: rotate(-90deg) scale(1, -1);
+    /* 1, 2, 3 */
+}
+
+#donut .card-body .circle-chart-day-info {
+    animation: circle-chart-appear 2s forwards;
+    opacity: 0;
+    transform: translateY(0.3em);
+}
+
+@keyframes circle-chart-fill {
+    to {
+        stroke-dasharray: 0 100;
+    }
+}
+
+@keyframes circle-chart-appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#donut .card-body .circle-chart-day[width],
+#donut .card-body .circle-chart-day[height] {
+    height: 160px;
+}
+
+#donut .card-body .circle-chart-week[width],
+#donut .card-body .circle-chart-week[height] {
+    height: 160px;
+}
+
+#donut .card-body .circle-chart-year[width],
+#donut .card-body .circle-chart-year[height] {
+    height: 160px;
+}
+
+#donut .card-body .circle-chart-day-circle[stroke] {
+    stroke: #ff9090;
+}
+
+#donut .card-body .circle-chart-week-circle[stroke] {
+    stroke: #73ff66;
+}
+
+#donut .card-body .circle-chart-year-circle[stroke] {
+    stroke: #00d9ff;
+}

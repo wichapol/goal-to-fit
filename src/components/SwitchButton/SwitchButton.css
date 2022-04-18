@@ -1,0 +1,112 @@
+.display-block{
+    display: block;
+}
+
+.display-none{
+    display: none;
+}
+
+/* button */
+.toggle-1 {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 0 0;
+}
+
+.toggle-1__input {
+    display: none;
+}
+
+.toggle-1__button {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 20px;
+
+    box-sizing: border-box;
+    height: 30px;
+    color: #929292;
+    background-color: #d6d6d6;
+    border: solid 1px #d6d6d6;
+    /* box-shadow: 0 0 12px rgba(255, 61, 94, 0.5); */
+    border-radius: 5px;
+    transition: all 0.3 ease;
+    padding-left: 10px;
+    padding-right: 5px;
+
+}
+
+.toggle-1__button p {
+    margin: 0px;
+
+}
+
+.toggle-1__button::before {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: -1px;
+    right: -2px;
+    height: 30px;
+    width: 50%;
+    padding: 0 0px;
+    font-size: 1em;
+    text-align: center;
+
+    content: "";
+    background: #f2395a;
+    color: white;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+
+}
+
+/* .toggle-1__input:checked+.toggle-1__button {
+    background: #d6d6d6;
+    border: solid 1px #d6d6d6;
+    color: #929292;
+    content: "";
+} */
+
+.toggle-1__input:checked+.toggle-1__button::before {
+    content: "";
+    left: 0px;
+    color: rgb(255, 255, 255);
+}
+ /*gender */
+.gender::before {
+   
+    content: "FEMALE";    
+    color: rgb(255, 255, 255);
+    
+}
+
+.toggle-1__input:checked+.gender::before {
+    content: "MALE";
+    left: 0px;
+    color: rgb(255, 250, 250);
+}
+
+/* indoor-outdoor  */
+
+.indoor-outdoor::before {
+   
+    content: "outdoor";    
+    color: rgb(255, 255, 255);
+    
+}
+
+.toggle-1__input:checked+.indoor-outdoor::before {
+    content: "indoor";
+    left: 0px;
+    color: rgb(255, 255, 255);
+}

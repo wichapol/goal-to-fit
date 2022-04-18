@@ -1,0 +1,194 @@
+[
+    {
+        "id": "out-01",
+        "name": "baseball",
+        "src": "./img/icon/baseball.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-02",
+        "name": "basketball",
+        "src": "./img/icon/basketball.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-03",
+        "name": "bicycle",
+        "src": "./img/icon/bicycle.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-04",
+        "name": "football",
+        "src": "./img/icon/football.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-05",
+        "name": "golf",
+        "src": "./img/icon/golf.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-06",
+        "name": "hula-hoop",
+        "src": "./img/icon/hula-hoop.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-07",
+        "name": "jumping-rope",
+        "src": "./img/icon/jumping-rope.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-08",
+        "name": "kayak",
+        "src": "./img/icon/kayak.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-09",
+        "name": "run",
+        "src": "./img/icon/run.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-10",
+        "name": "skateboard",
+        "src": "./img/icon/skateboard.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-11",
+        "name": "swimming",
+        "src": "./img/icon/swimming.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-12",
+        "name": "tennis",
+        "src": "./img/icon/tennis.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-13",
+        "name": "trekking",
+        "src": "./img/icon/trekking.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-14",
+        "name": "volleyball",
+        "src": "./img/icon/volleyball.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-15",
+        "name": "walker",
+        "src": "./img/icon/walker.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "out-16",
+        "name": "yoga",
+        "src": "./img/icon/yoga.png",
+        "type": "outdoor"
+    },
+    {
+        "id": "in-01",
+        "name": "badminton",
+        "src": "./img/icon/indoor/badminton.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-02",
+        "name": "basketball",
+        "src": "./img/icon/indoor/basketball.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-03",
+        "name": "bicycle",
+        "src": "./img/icon/indoor/bicycle.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-04",
+        "name": "bodyweight",
+        "src": "./img/icon/indoor/bodyweight.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-05",
+        "name": "bowling",
+        "src": "./img/icon/indoor/bowling.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-06",
+        "name": "boxing",
+        "src": "./img/icon/indoor/boxing.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-07",
+        "name": "climbing",
+        "src": "./img/icon/indoor/climbing.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-08",
+        "name": "dumbbell",
+        "src": "./img/icon/indoor/dumbbell.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-9",
+        "name": "elliptical",
+        "src": "./img/icon/indoor/elliptical.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-10",
+        "name": "football",
+        "src": "./img/icon/indoor/football.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-11",
+        "name": "run",
+        "src": "./img/icon/indoor/run.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-12",
+        "name": "swimming",
+        "src": "./img/icon/indoor/swimming.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-13",
+        "name": "table-tennis",
+        "src": "./img/icon/indoor/table-tennis.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-14",
+        "name": "volleyball",
+        "src": "./img/icon/indoor/volleyball.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-15",
+        "name": "weightlifting",
+        "src": "./img/icon/indoor/weightlifting.png",
+        "type": "indoor"
+    },
+    {
+        "id": "in-16",
+        "name": "yoga",
+        "src": "./img/icon/indoor/yoga.png",
+        "type": "indoor"
+    }
+]
