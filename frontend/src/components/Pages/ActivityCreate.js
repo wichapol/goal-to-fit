@@ -12,7 +12,7 @@ import { Navigate } from "react-router-dom";
 import axios from "axios";
 
 const client = axios.create({
-    baseURL: "http://localhost:4000",
+    baseURL: "https://bac-sage.vercel.app/",
   });
 
 function ActivityCreate() {

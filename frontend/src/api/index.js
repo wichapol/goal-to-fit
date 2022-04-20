@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const client = axios.create({
-  baseURL: "http://localhost:4000",
+  baseURL: "https://bac-sage.vercel.app/",
 });
 
 export const getRecords = async () =>{
@@ -24,5 +24,5 @@ export const deleteRec = async (id) => {
     const delRec = await client.delete(`/users/me/records/${id}`);
     return delRec;
 }
-
+// ljwhguwrhguo2ro
 
