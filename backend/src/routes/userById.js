@@ -1,6 +1,6 @@
 const express = require('express');
 const recordeRoute = require('./record');
-const me = require('../DataToTast/dataUserInfo.json')
+
 const router = express.Router();
 
 router.use('/records', recordeRoute);

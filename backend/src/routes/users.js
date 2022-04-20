@@ -2,7 +2,7 @@ const express = require('express');
 const loginRouter = require('./login');
 const registerRouter = require('./register');
 const userByIdRouter = require('./userById')
-const users = require('../DataToTast/UserTest.json')
+
 const router = express.Router();
 
 router.use('/login', loginRouter );
