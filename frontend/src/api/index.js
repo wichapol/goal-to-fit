@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const client = axios.create({
-  baseURL: "https://bac-sage.vercel.app",
+  baseURL: "https://backendgoaltofit.vercel.app",
 });
 
 export const getRecords = async () =>{
