@@ -9,11 +9,11 @@ import "../ActivityCreate/ActivityCreate.css";
 import IconAct from "../IconAct/IconAct";
 import dataIconAct from "./DataToTast/dateActIcon.json";
 import { Navigate } from "react-router-dom";
-import axios from "axios";
+import { postRecordById } from "../../api";
 
-const client = axios.create({
-    baseURL: "https://backendgoaltofit.vercel.app",
-  });
+// const client = axios.create({
+//     baseURL: "https://localhost:4000",
+//   });
 
 function ActivityCreate() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -112,7 +112,8 @@ function ActivityCreate() {
       addActivity !== "" &&
       actDate !== "" &&
       actQuantity !== "" &&
-      actDurationTime !== ""&& actDurationTime.length  === 8
+      actDurationTime !== "" &&
+      actDurationTime.length === 8
     ) {
       setActDisabledSubmit(false);
       return;
@@ -122,22 +123,23 @@ function ActivityCreate() {
   }, [addActivity, actDate, actQuantity, actDurationTime]);
 
   async function actSubmit(event) {
-    const prostResponse = await client.post("/users/me/records", {
+    const newRecord = {
       activity: actSelect,
       actDate: actDate,
       quantity: actQuantity,
       duration: `${actDurationTime} hrs`,
       timestamp: new Date(),
-    });
+    };
 
+    const prostResponse = await postRecordById(newRecord);
     if (prostResponse.status === 201) {
-        console.log(prostResponse.data)
+      console.log(prostResponse.data);
       setIsChecked(true);
       setInterval(() => {
         <Navigate to="/activity-report" />;
       }, 5000);
-    }else {
-        alert('activity is not valid');
+    } else {
+      alert("activity is not valid");
     }
 
     event.preventDefault();
@@ -239,10 +241,7 @@ function ActivityCreate() {
           <div className="container-act-sel-from " hidden={!isShowFrom}>
             <div className="middle-font font-large-head  act-create-title">
               Activity name
-              <div
-                className="button-close"
-                onClick={removeSelect}                
-              >
+              <div className="button-close" onClick={removeSelect}>
                 <i className="fa fa-plus"></i>
               </div>
             </div>
