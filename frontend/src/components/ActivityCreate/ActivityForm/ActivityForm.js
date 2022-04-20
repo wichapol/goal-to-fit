@@ -30,7 +30,7 @@ function ActivityForm({ showFrom, closeForm, id }) {
           setActRec(getRecByID.data.activity);
           setDateRec(getRecByID.data.actDate);
           setQuantityRec(getRecByID.data.quantity);
-          setDurationRec(getRecByID.data.duration.slice(0,8));
+          setDurationRec(getRecByID.data.duration.slice(0, 8));
         } else {
           alert("Cannot connect to server");
         }
@@ -43,28 +43,26 @@ function ActivityForm({ showFrom, closeForm, id }) {
     setDateRec(editDateRec);
   }
   function handlerRecQuantity(event) {
-    const editQuanRec = event.target.value;  
+    const editQuanRec = event.target.value;
     setQuantityRec(editQuanRec);
   }
 
   function handlerDurationRec(event) {
-    
     let editDuraRec = event.target.value;
 
     if (editDuraRec.length === 2 || editDuraRec.length === 5) {
       editDuraRec = editDuraRec + ":";
-      
     } else if (editDuraRec.length > 8) {
       return;
     }
-    console.log(editDuraRec.length)
+    console.log(editDuraRec.length);
     setDurationRec(editDuraRec);
   }
 
   async function recUpdate(event) {
     const validEditDate = dateRec !== "" && dateRec.length === 10;
     const validEditQuan = quantityRec !== "" && quantityRec.length < 20;
-    const validEditDura = durationRec !== "" 
+    const validEditDura = durationRec !== "";
 
     if (validEditDate && validEditQuan && validEditDura) {
       const newRecord = {
@@ -164,15 +162,13 @@ function ActivityForm({ showFrom, closeForm, id }) {
                 type="text"
                 id="duration-time"
                 name="act-duration-time"
-                value={durationRec.slice(0,8)} 
-                style={
-                  durationRec !== "" 
-                    ? null
-                    : { borderColor: "red" }
-                }
+                value={durationRec.slice(0, 8)}
+                style={durationRec !== "" ? null : { borderColor: "red" }}
               >
-                
-                {durationRec.length === 8?null  : `please insert activity quantity `}<br/>
+                {durationRec.length === 8
+                  ? null
+                  : `please insert activity quantity `}
+                <br />
                 *It takes about 15 minutes or more.
               </Input>
             </div>

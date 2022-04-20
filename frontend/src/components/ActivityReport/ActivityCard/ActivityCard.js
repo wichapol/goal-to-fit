@@ -6,7 +6,6 @@ import ActivityForm from "../../ActivityCreate/ActivityForm/ActivityForm";
 
 function ActivityCard({ actDate, actQuantity, actDuration, actArray, recID }) {
   const [isShowFrom, setisShowFrom] = useState(false);
- 
 
   const navigate = useNavigate();
   const actType = actArray[0].type;
@@ -32,14 +31,18 @@ function ActivityCard({ actDate, actQuantity, actDuration, actArray, recID }) {
   const id = recID.toString();
 
   async function handleRecDelete() {
-    const delRec = await deleteRec(id);
+    let text = "Confirm to delete  K0 or Cancel.";
 
-    console.log(delRec.statusText);
-
-    if (delRec.status === 204) {
-      navigate(0);
+    if (window.confirm(text) == true) {
+      const delRec = await deleteRec(id);
+      console.log(delRec.statusText);
+      if (delRec.status === 204) {
+        navigate(0);
+      } else {
+        alert("activity is not valid");
+      }
     } else {
-      alert("activity is not valid");
+      return setisShowFrom(false);
     }
   }
 
@@ -98,7 +101,7 @@ function ActivityCard({ actDate, actQuantity, actDuration, actArray, recID }) {
       <ActivityForm
         showFrom={!isShowFrom}
         closeForm={handleShowClose}
-        id={id}        
+        id={id}
       />
     </>
   );
