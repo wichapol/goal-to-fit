@@ -173,7 +173,7 @@ section {
 .button-closebutton :hover{    
     width: 100px;
 }
-.button-closebutton button:focus {
+.button-closebutton div:focus {
     outline: none; 
     outline: none;
     cursor: pointer;
