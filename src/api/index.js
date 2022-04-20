@@ -14,9 +14,15 @@ export const getRecordById = async (id) => {
   return getRecByID;
 }
 
+export const updateRec = async (id , newRecord) => {    
+  const updatRec = await client.put(`/users/me/records/${id}` , newRecord );
+  return updatRec;
+}
 
 
 export const deleteRec = async (id) => {    
     const delRec = await client.delete(`/users/me/records/${id}`);
     return delRec;
 }
+
+

@@ -31,7 +31,7 @@ const Login = () => {
                                 id='Password'  type="password" placeholder="***********"                      
                         />
                        
-                        <Link to="/profile">
+                        <Link to="/activity-report">
                              <Button  type="submit" value="submit">Login</Button>
                         </Link>                      
                     </div>
