@@ -30,6 +30,7 @@ router.get("/:recordId", (req, res, next) => {
 router.get("/", async (req, res, next) => {
   const records = await RecordModel.find({});
   res.send(records);
+  
 });
 
 router.post("/", async (req, res, next) => {

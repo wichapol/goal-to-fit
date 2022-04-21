@@ -12,8 +12,10 @@ router.use('/me', userByIdRouter);
 
 
 router.get('/username/:username',(req, res, next) => {});
+
+
 router.get('/',(req, res, next) => {
-    res.send(users)
+    res.send("users")
 });
 router.delete('/',(req, res, next) => {});
 

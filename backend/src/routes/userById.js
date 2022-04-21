@@ -6,7 +6,7 @@ const router = express.Router();
 router.use('/records', recordeRoute);
 
 router.get('/',(req, res, next) => {
-    res.send(me)
+    res.send("me")
 });
 router.get('/',(req, res, next) => {});
 router.post('/',(req, res, next) => {});
