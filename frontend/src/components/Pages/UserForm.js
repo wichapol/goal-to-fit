@@ -151,8 +151,8 @@ const UserForm = () => {
     }
   }, [userGoal, allExerciseDay]);
 
-  function userSubmit(event) {
-    event.preventDefault();
+  function userSubmit() {
+    setIsChecked(!isChecked)    
   }
 
   function resetFrom(event) {

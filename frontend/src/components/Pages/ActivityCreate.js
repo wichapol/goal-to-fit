@@ -226,11 +226,10 @@ function ActivityCreate() {
                     return (
                       <IconAct
                         key={index}
-                        num={icon.id}
                         src={icon.src}
                         alt={icon.name}
-                        name={icon.name}
                         iconName={icon.name}
+                        num={`${icon.id}`}
                         setSelect={addSelect}
                       />
                     );

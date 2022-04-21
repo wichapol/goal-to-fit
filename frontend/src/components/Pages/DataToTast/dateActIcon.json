@@ -43,7 +43,7 @@
     },
     {
         "id": "out-08",
-        "name": "kayak",
+        "name":"kayak",
         "src": "./img/icon/kayak.png",
         "type": "outdoor"
     },

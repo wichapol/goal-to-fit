@@ -58,7 +58,7 @@ const Signup = () => {
                         <AgreeMent id="terms" type="checkbox" name="terms"
                             value={value || false} onClick={handleValue} required />
 
-                        <Link to="/activity-report">
+                        <Link to="/profile">
                             <Button type="submit" value="submit"
                             >
                                 Continue
