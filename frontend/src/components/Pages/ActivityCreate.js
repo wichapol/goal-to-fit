@@ -209,32 +209,30 @@ function ActivityCreate() {
             />
             <div className="container-list ">
               <div className="activity-list">
-                {resultIcon
-                  .filter((value) => {
-                    if (searchTerm === "") {
-                      return value;
-                    } else if (
-                      value.name
-                        .toLowerCase()
-                        .includes(searchTerm.toLowerCase())
-                    ) {
-                      return value;
-                    }
-                    return value;
-                  })
-                  .map((icon, index) => {
-                    return (
-                      <IconAct
-                        key={index}
-                        num={icon.id}
-                        src={icon.src}
-                        alt={icon.name}
-                        name={icon.name}
-                        iconName={icon.name}
-                        setSelect={addSelect}
-                      />
-                    );
-                  })}
+                {Array.isArray(resultIcon) &&
+                  resultIcon
+                    .filter((icon) => {
+                      if (searchTerm === "") {
+                        return icon;
+                      } else {
+                        return icon.name
+                          .toLowerCase()
+                          .includes(searchTerm.toLowerCase());
+                      }
+                    })
+                    .map((icon, index) => {
+                      return (
+                        <IconAct
+                          key={index}
+                          num={icon.id}
+                          src={icon.src}
+                          alt={icon.name}
+                          name={icon.name}
+                          iconName={icon.name}
+                          setSelect={addSelect}
+                        />
+                      );
+                    })}
               </div>
             </div>
           </div>
