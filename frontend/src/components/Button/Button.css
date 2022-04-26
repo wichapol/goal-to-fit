@@ -1,34 +1,47 @@
 .button-submit {
-    align-self: center;
-    background-color: #f85f6a; 
-    border-radius: 10px;
-    border: none;
-    color: #ffffff;
-    /* padding: 1rem 1.5rem; */
-    height: 2.5em;
-    width: 100%;
-    margin-top: 20px ;
-    margin-bottom: 30px;
-    font-size: 1rem;
-    outline: none;
- }
+   align-self: center;
+   background-color: #f85f6a;
+   border-radius: 10px;
+   border: none;
+   color: #ffffff;
+   /* padding: 1rem 1.5rem; */
+   height: 2.5em;
+   width: 100%;
+   margin-top: 20px;
+   margin-bottom: 30px;
+   font-size: 1rem;
+   outline: none;
+}
 
- .button-reset {
-    align-self: center;
-    background-color: var(--primary-button-meal); 
-    border-radius: 10px;
-    border: none;
-    color: var(--primary-icon-color);
-    /* padding: 1rem 1.5rem; */
-    height: 2.5em;
-    width: 100%;
-    margin-top: 20px ;
-    margin-bottom: 30px;
-    font-size: 1rem;
-    outline: none;
- }
+.button-submit:hover {
+   cursor: pointer;
+   border: 2px solid var(--primary-text-color);  
+   box-shadow: var(--primary-text-color) 0 2px 8px 0;
+}
 
- .button-cf{
+.button-reset {
+   align-self: center;
+   background-color: var(--primary-button-meal);
+   border-radius: 10px;
+   border: none;
+   color: var(--primary-icon-color);
+   /* padding: 1rem 1.5rem; */
+   height: 2.5em;
+   width: 100%;
+   margin-top: 20px;
+   margin-bottom: 30px;
+   font-size: 1rem;
+   outline: none;
+   cursor: pointer;
+}
+
+.button-reset:hover {
+   cursor: pointer;
+   border: 2px solid #a9a9a9;
+   box-shadow: #000000 0 2px 8px 0;
+}
+
+.button-cf {
    align-self: center;
    border: none;
    border-radius: 10px;
@@ -38,8 +51,13 @@
    background-color: #72bb52;
 }
 
-.disabled{
-   
+.button-cf:hover{
+   cursor: pointer;   
+   border: 2px solid #6ccb43;
+   box-shadow: #72bb52 0 2px 8px 0;
+}
+
+.disabled {
    background-color: var(--third--text-color);
    color: white;
 }
