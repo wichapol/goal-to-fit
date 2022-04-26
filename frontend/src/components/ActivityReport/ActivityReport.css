@@ -3,11 +3,9 @@ section {
 }
 
 .container-activity-report {
-    max-width: 1200px;
     display: flex;
     justify-content: center;
-    gap: 50px;
-    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 /* container-css */
@@ -86,16 +84,20 @@ section {
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
 .act-lists::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
+    display: none;
+    /* for Chrome, Safari, and Opera */
 }
+
 /* -------------------------------ADS START------------------------------- */
 #ads .ads-fit {
     margin-top: 20px;
     position: relative;
-    
-  }
-  #ads .ads-fit .ads-img {
+
+}
+
+#ads .ads-fit .ads-img {
     width: 100%;
     height: 100%;
     display: block;
@@ -107,8 +109,9 @@ section {
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
-  }
-  #ads .ads-fit .ads-head {
+}
+
+#ads .ads-fit .ads-head {
     position: absolute;
     right: 10px;
     background-position-x: 341px;
@@ -127,9 +130,9 @@ section {
     background-clip: text;
     -webkit-background-clip: text;
     filter: brightness(3);
-  }
-  
-  /* --------------------------------ADS END-------------------------------- */
+}
+
+/* --------------------------------ADS END-------------------------------- */
 
 
 .border-red {
@@ -146,4 +149,19 @@ section {
 
 .border-yellow {
     border: 2px solid yellow;
+}
+
+@media screen and (max-width: 1180px) and (min-width: 820px) {
+    .container-activity-report {
+        flex-direction: column;
+    }
+
+    .container-css-50 {
+        width: 100%
+    }
+
+    .container-act-form{
+        height: 600px;
+    }
+
 }

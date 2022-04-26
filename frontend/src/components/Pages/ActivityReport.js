@@ -48,7 +48,7 @@ const ActivityReport = () => {
         {/* <!-- -------------------------------------------------------------------------- -->
 
                         <!-- MAIN CONTENT SECTION START --> */}
-        <section className="container-activity-report ">
+        <section className="container container-activity-report">
           <div className="container-css-50 ">
             <div className="header-act-ls ">
               <p className="secondary-text-color middle-font">Activity lists</p>

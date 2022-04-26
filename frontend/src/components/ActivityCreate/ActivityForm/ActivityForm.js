@@ -94,8 +94,8 @@ function ActivityForm({ showFrom, closeForm, id }) {
       <div className="act-from-background">
         <div className="container-act-form">
           <div className="middle-font font-large-head  act-form-title">
-            Activity name
-            <div className="button-close" onClick={close}>
+            Activity Edit
+            <div className="button-close-edit" onClick={close}>
               <i className="fa fa-plus"></i>
             </div>
           </div>

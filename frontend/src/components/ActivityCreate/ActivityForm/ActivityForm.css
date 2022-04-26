@@ -39,11 +39,11 @@
 .act-form-title{
     position: relative;
     text-align: center;
-    padding: 15px;
+    /* padding: 15px; */
     margin: 0;
     background-color: var(--primary-text-color);
     color: #fff;
-    border-radius: 20px 20px 0 0;
+    border-radius: 19px 20px 0 0;
 
 }
 
@@ -51,7 +51,7 @@
     display: flex;
     flex-direction: column;    
     align-items: center;
-    gap: 20px;
+    gap: 1%;
 }
 .act-form-icon{
     display: flex;
@@ -90,4 +90,27 @@
 .act-form-button button{
    min-width: 100px;
    max-width: 200px;
+}
+
+.button-close-edit{
+    position: absolute;
+    top: -1px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+
+
+
+@media screen and (max-width: 1180px) and (min-width: 820px) {    
+
+    .container-act-form{
+        height: 600px;
+        margin: auto;
+        width: 40%;
+    }
+
 }
