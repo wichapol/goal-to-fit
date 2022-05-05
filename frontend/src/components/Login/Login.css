@@ -21,7 +21,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    min-width: 350px;
+    min-width: 318px;
     max-width: 400px;
     margin: 0px 0px;
     /* border: 2px solid red; */
@@ -79,8 +79,20 @@
  }
 
  @media screen and (min-width: 320px) {
+    
     .section-login{
         /* border: 2px solid rgb(4, 110, 13); */
-        display: flex;      
+        display: flex;  
+        max-width: 318px;    
     }
  }
+
+ @media screen and (min-width: 450px) {
+    
+    .section-login{
+        /* border: 2px solid rgb(4, 110, 13); */
+        display: flex;  
+        max-width: 400px;    
+    }
+ }
+

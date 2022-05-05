@@ -30,7 +30,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    min-width: 350px;
+    min-width: 3ๅคpx;
     max-width: 400px;
     margin: 0px 0px;
     /* position: relative; */
@@ -47,3 +47,21 @@
     margin-top: 20px;
 
 }
+
+@media screen and (min-width: 320px) {
+    
+    .signup-section{
+        /* border: 2px solid rgb(4, 110, 13); */
+        display: flex;  
+        max-width: 318px;    
+    }
+ }
+
+ @media screen and (min-width: 450px) {
+    
+    .signup-section{
+        /* border: 2px solid rgb(4, 110, 13); */
+        display: flex;  
+        max-width: 400px;    
+    }
+ }
