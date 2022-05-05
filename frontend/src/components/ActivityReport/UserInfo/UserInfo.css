@@ -1,30 +1,86 @@
-.act-user-profile{
-    display: flex;
+.act-user-profile {
+    display: none;
     flex-direction: row;
     justify-content: space-between;
-    gap: 20px;
+    gap: 20px;   
 
-    border-bottom: 1px solid var(--secondary-icon-color);
-    border-top: 1px solid var(--secondary-icon-color);
-
-    padding: 15px 15px;
-}
-.act-user-image{
-    width: 80px;
-    height: 80px;
-    
+    padding: 15px 15px;   
 }
 
-.act-user-image img{
+.act-user-profile p {
+    margin: 0;
+}
+
+.act-user-image {
+    display: none; 
+}
+
+.act-user-image img {
     width: 100%;
     background-color: yellow;
     border-radius: 100%;
 }
 
-.act-user-info{
-    width: 100%;   
-    
+.act-user-info {
+    width: 100%;
+
 }
-.act-user-info table{
-    width: 100%;   
+
+.act-user-info table {
+    width: 100%;
+}
+
+@media screen and (min-width: 320px) {
+    .act-user-profile {
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+
+        border: none;
+        border-radius: 20px;
+        /* align-items: center; */
+
+        padding: 10px 10px;
+
+        box-shadow: 0 0 25px -5px rgb(0 0 0 / 15%);
+    }
+
+    .act-user-image {
+        display: flex;
+        align-items: center;
+        width: 100px;
+    }    
+
+    .goal-start {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 576px) {
+
+    .goal-start {
+        display: block;
+    }
+
+}
+@media screen and (min-width: 768px) {
+
+    .goal-start {
+        display: block;
+    }
+
+    .act-user-profile {       
+        display: flex;
+        box-shadow: none;
+        border-radius: 0;
+        border-bottom: 1px solid var(--secondary-icon-color);
+        border-top: 1px solid var(--secondary-icon-color);
+    }
+
+    .act-user-image {       
+        align-items: flex-start;        
+    }    
+    
+
 }

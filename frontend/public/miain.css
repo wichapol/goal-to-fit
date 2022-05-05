@@ -51,6 +51,8 @@
     --welldone: rgb(60, 240, 0);
     --fair: rgb(255, 200, 0);
     --try: rgb(255, 55, 0);
+    
+    --primary-gradient:linear-gradient(90deg, rgba(255, 93, 85, 1) 0%, rgba(255, 190, 187, 1) 100%);
 }
 /*
 วิธีใช้
@@ -177,7 +179,8 @@ body{
 /* footer start */
 .wrapper{
     min-height: 100vh;
-    margin-bottom: -60px;
+    margin-bottom: 60px;
+    min-width: 100vw;
 }
 footer,
 .push {

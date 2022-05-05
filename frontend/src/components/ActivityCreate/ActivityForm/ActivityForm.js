@@ -91,7 +91,7 @@ function ActivityForm({ showFrom, closeForm, id }) {
 
   return (
     <section hidden={showFrom}>
-      <div className="act-from-background">
+      <div className="act-form-background" >
         <div className="container-act-form">
           <div className="middle-font font-large-head  act-form-title">
             Activity Edit

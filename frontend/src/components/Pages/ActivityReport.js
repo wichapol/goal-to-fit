@@ -15,7 +15,10 @@ import { getRecords } from "../../api";
 
 const ActivityReport = () => {
   const [actCardsResult, setActCardsResult] = useState("");
-  
+  const current = new Date();
+  const date = `${current.getDate()}/${
+    current.getMonth() + 1
+  }/${current.getFullYear()}`;
 
   useEffect(() => {
     (async () => {
@@ -33,11 +36,6 @@ const ActivityReport = () => {
     })(); //IIFE
   }, []);
 
-
- 
-
- 
-
   return (
     <>
       {/* <!-- ใส่ background พื้นหลังทั้งหน้าจอ ที่ tag body --> */}
@@ -49,10 +47,82 @@ const ActivityReport = () => {
 
                         <!-- MAIN CONTENT SECTION START --> */}
         <section className="container container-activity-report">
-          <div className="container-css-50 ">
+          <div className="container-mobile">
+            <div className="mobile-header">
+              <NavLink
+                to="/ativity-create"
+                className="d-flex justify-content-center secondary-text-color align-items-center"
+              >
+                {/* <!-- Right Button --> */}
+                <i className="fa fa-plus"></i>
+                {/* <!-- Right Button --> */}
+                <p className="ml-2 my-0">Create activity</p>
+              </NavLink>
+            </div>
+            <div className="mobile-title">
+              <h5>Activity Reports</h5>
+            </div>
             <div className="header-act-ls ">
+              <p className="third--text-color">{date}</p>
+              <p className="third--text-color">Workout days 92</p>
+            </div>
+            <div className="mobile-user-profile">
+              {Array.isArray(dataUser) &&
+                dataUser.map((info) => {
+                  return (
+                    <UserInfo
+                      key={info.id}
+                      src={info.src}
+                      alt={info.image}
+                      userName={info.userName}
+                      headRow1={info.weigth}
+                      headRow2={info.BMI}
+                      headRow3={info.duration}
+                    />
+                  );
+                })}
+            </div>
+            <div>
+              <ActivityGraph />
+            </div>
+            <div>
+              <DonutChart />
+            </div>
+            <dip>
+              <p className="secondary-text-color font-large-head middle-font mt-3 mb-2 ">
+                Activity lists
+              </p>
+              <p className="border-Bottom"></p>
+            </dip>
+            <div className="act-container">
+              <div className="act-lists ">
+                {Array.isArray(actCardsResult) &&
+                  actCardsResult.map((act) => {
+                    return (
+                      <ActivityCard
+                        key={act._id}
+                        recID={act._id}
+                        actArray={act.activity}
+                        actDate={act.actDate}
+                        actQuantity={act.quantity}
+                        actDuration={act.duration}
+                      />
+                    );
+                  })}
+              </div>
+            </div>
+          </div>
+
+          {/* destop */}
+          <div className="title-content">
+            <p>
+              Activity Report
+            </p>
+          </div>
+          <div className="container-report">
+            <div className="header-act-ls">
               <p className="secondary-text-color middle-font">Activity lists</p>
-              <p className="third--text-color">Today</p>
+              <p className="third--text-color">{date}</p>
               <p className="third--text-color">Workout days 92</p>
             </div>
             <div>
@@ -73,7 +143,6 @@ const ActivityReport = () => {
                     </p>
                   </NavLink>
                 </div>
-
                 {Array.isArray(dataUser) &&
                   dataUser.map((info) => {
                     return (
@@ -111,7 +180,7 @@ const ActivityReport = () => {
               </div>
             </div>
           </div>
-          <div className="container-css-50">
+          <div className="container-report">
             <div>
               <ActivityGraph />
             </div>
@@ -138,9 +207,8 @@ const ActivityReport = () => {
             </div>
           </div>
         </section>
-       
+
         {/* <!-- MAIN CONTENT SECTION END --> */}
-        <div className="push"></div>
         <Footer />
       </div>
     </>

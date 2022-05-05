@@ -5,30 +5,75 @@
 section {
     margin: 0px;
 }
-.wrapper-create{
+
+.wrapper-create {
     min-height: 100vh;
     margin-bottom: -60px;
-   
+
 }
 
-.container-activity-create{
+.title-create-mob {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--primary-gradient);
+    height: 60px;
+    width: 100%;
+
+    padding: 0 10px;
+}
+
+.button-cf-mob {
+    align-self: center;
+    border: none;
+
+    padding: 10px;
+
+    color: #72bb52;
+    background-color: transparent;
+    filter: drop-shadow(0px 0px 3px #60ff1c) drop-shadow(0px 0px 10px #7bff00) drop-shadow(0px 0px 20px #c2ff35);
+}
+
+
+.button-cf-mob i {
+    font-size: 1.2em;
+}
+
+.button-cf-mob:disabled {
+    background-color: transparent;
+    color: var(--secondary-icon-color);
+    filter: none;
+}
+
+
+.title-create-mob p {
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.container-activity-create {
+    position: relative;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+    display: none;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /* container-css */
-.container-css-act-sel{
+.container-css-act-sel {
     /* border: 2px solid red; */
     box-sizing: border-box;
     padding: 30px 0;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 30px;
 
-    width: 50%;   
-    
+    width: 50%;
+
 }
 
 /* track-select */
@@ -40,44 +85,51 @@ section {
     margin: 20px 0;
     min-height: 120px;
 }
-.activity-select-icon  {
+
+.activity-select-icon {
     display: flex;
     justify-content: center;
     width: 100%;
 }
+
 .activity-select-icon .block-icon {
     width: 100%;
 }
 
 /* container-list */
-.container-list{
+.container-list {
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
     margin: 20px 0;
 }
 
-.activity-list{
+.activity-list {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: row;
     column-gap: calc(100%/8);
     row-gap: 20px;
-    padding: 10px 0;
+    padding: 10px;
     flex-wrap: wrap;
     width: 100%;
     height: 450px;
     overflow-y: scroll;
     overflow-x: hidden;
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
+    -ms-overflow-style: none;
+    /* for Internet Explorer, Edge */
+    scrollbar-width: none;
+    /* for Firefox */
 
-    
+
 }
+
 .activity-list::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
+    display: none;
+    /* for Chrome, Safari, and Opera */
 }
+
 /* button */
 /* .button-cf{
    align-self: center;
@@ -100,47 +152,48 @@ section {
 
 } */
 
-.bottun-fev{
+.bottun-fev {
     align-self: center;
-   border: none;
-   border-radius: 20px;
-   padding: 10px;
-   width: 25%;
-   height: 100%;
-   color: #929292;
-   background-color: #d7d7d7;
-   text-align: center;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 25%;
+    height: 100%;
+    color: #929292;
+    background-color: #d7d7d7;
+    text-align: center;
 
 }
 
-.bottun-add{
+.bottun-add {
     border: none;
-    align-self:center;
+    align-self: center;
     color: #f85f6a;
-    font-size: 30px;   
+    font-size: 30px;
     background-color: white;
 }
-   
 
 
-.act-card{
+
+.act-card {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.act-card p{
+.act-card p {
     margin: 1em 0px;
 }
-.container-act-sel-from{
+
+.container-act-sel-form {
     box-sizing: border-box;
-    margin: 30px 0;
+    margin: 30px auto 100px auto;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 30px;
 
-    width: 50%; 
-    height: 80%;  
+    width: 90%;
+    height: max-content;
 
     border-radius: 20px;
     box-shadow: 0 0 25px -5px rgb(0 0 0 / 15%);
@@ -148,8 +201,11 @@ section {
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
 
+
+
 }
-.act-create-title{
+
+.act-create-title {
     position: relative;
     text-align: center;
     padding: 15px;
@@ -160,36 +216,39 @@ section {
 
 }
 
-.button-close{
+.button-close {
     position: absolute;
     top: 15px;
     right: 20px;
     background-color: transparent;
     border: none;
-    color:white;
+    color: white;
     cursor: pointer;
     transform: rotate(45deg);
 }
-.button-closebutton :hover{    
+
+.button-closebutton :hover {
     width: 100px;
 }
+
 .button-closebutton div:focus {
-    outline: none; 
+    outline: none;
     outline: none;
     cursor: pointer;
     width: 100px;
 }
 
 
-.act-create{
+.act-create {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     align-items: center;
     gap: 20px;
 }
-.act-create-icon{
+
+.act-create-icon {
     display: flex;
-    justify-content: center;   
+    justify-content: center;
     margin: 20px 0;
 }
 
@@ -197,18 +256,18 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%; 
+    width: 80%;
 }
 
-.act-create-input span{
+.act-create-input span {
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-direction: column;   
-    width: 100%;    
+    flex-direction: column;
+    width: 100%;
 }
 
-.act-create-button{
+.act-create-button {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -216,21 +275,73 @@ section {
     gap: 20px;
 }
 
-.act-create-button button{
-   min-width: 100px;
-   max-width: 200px;
+.act-create-button button {
+    min-width: 100px;
+    max-width: 200px;
 }
 
 
 
-.border-red{
-    border: 2px solid red;
+
+@media screen and (min-width: 320px) {
+    .activity-select .button-cf {
+        display: none;
+    }
+
+    .container-activity-create {
+        display: flex;
+    }
+
+    .title-create-mob {
+        display: flex;
+    }
+
 }
 
-.border-bule{
-    border: 2px solid blue;
+@media screen and (min-width: 576px) {
+    .container-activity-create {
+        width: 500px;
+    }
+
+    .container-act-sel-form {
+        width: 450px;
+    }
+
 }
 
-.border-green{
-    border: 2px solid green;
+@media screen and (min-width: 992px) {
+    .title-create-mob {
+        display: none;
+    }
+
+    .container-activity-create {
+
+        justify-content: center;
+        flex-direction: row;
+
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .activity-select .button-cf {
+        display: block;
+    }
+
+    .container-activity-create .act-form-background {
+        position: static;
+        background-color: transparent;
+    }
+
+    .container-cre-50 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: inherit;
+    }
+
+    .container-act-sel-form {
+        margin-top: 0;
+    }
+
 }

@@ -6,15 +6,97 @@ section {
     margin: 0px;
 }
 
-hr{
+hr {
     margin: 0px;
 }
 
-.nav-bar{
-    height: 60px;
+.menu-list {
+    display: block;
+    list-style: none;
+    margin-left: 10px;
 }
 
-.nav-bar-item{
-    height: 100%;
+.menu-link {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    color: var(--secondary-text-color);
 }
 
+.menu-link.btn-logout {
+    color: var(--primary-text-color);
+}
+
+.menu-name {
+    margin: 0 5px;
+    /* reset margin-bottom ของ boostrap ใน tag p */
+    width: 100%;
+    margin-top: 1px;
+    text-align: center;
+}
+
+/* menu hover start */
+
+.menu-list p::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;    
+    width: 100%;
+    height: 5px;
+    /* background: var(--primary-text-color); */
+    transition: all 0.3s ease;
+
+    background-image:
+        linear-gradient(transparent 0%,
+            transparent 0%,
+            rgba(255, 93, 85, 1) 100%,
+            rgba(255, 190, 187, 1)  0%);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    background-position-x: right;
+
+    transition: background-size 300ms;
+}
+
+.menu-list p:hover:before {    
+    background-size: 100% 100%;
+    background-position-x: left;
+}
+
+
+@media screen and (min-width: 320px) {
+    .menu-link {
+        display: flex;
+
+        list-style: none;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .menu-icon {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .menu-link {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 5px;
+
+        list-style: none;
+        font-weight: 300;
+        font-size: 20px;
+
+        width: 100%;
+    }
+
+    .menu-icon {
+        font-size: 1.2em;
+    }
+
+}

@@ -22,7 +22,7 @@ const SwitchButton = ({ children = "", textLeft = "textLeft", textRight = "textR
                         name={inputName} id={inputName} onChange={handleInputChange}
                         value={ischecked}
                     />
-                    <span className={` toggle-1__button ${textOnSwitch}`}>
+                    <span className={`toggle-1__button ${textOnSwitch}`}>
                         <p>{textLeft}</p>
                         <p>{textRight}</p>
                     </span>

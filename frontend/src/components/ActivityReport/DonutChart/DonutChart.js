@@ -4,7 +4,7 @@ import "./DonutChart.css"
 function DonutChart() {
     return (
         <>
-            <div className="col-12 order-3  mt-3"
+            <div className="mt-3"
                 id="donut">
                 <div className="card">
                     <div className="card-body  justify-content-center align-items-center text-center">

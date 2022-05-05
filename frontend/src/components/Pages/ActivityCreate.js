@@ -20,7 +20,7 @@ function ActivityCreate() {
   const [isIndoor, setIsIndoor] = useState(false);
   const [resultIcon, setResultIcon] = useState([]);
   const [actSelect, setActSelect] = useState("");
-  const [isShowFrom, setisShowFrom] = useState(false);
+  const [isShowForm, setIsShowForm] = useState(false);
   const [disabledCf, setDisabledCf] = useState(true);
   const [addActivity, setAddActivity] = useState("");
 
@@ -66,14 +66,14 @@ function ActivityCreate() {
 
   function removeSelect(event) {
     setActSelect("");
-    setisShowFrom(false);
+    setIsShowForm(false);
     setDisabledCf(true);
     event.preventDefault();
   }
 
   function handleCfClick(event) {
-    setisShowFrom(true);
-    setDisabledCf(true);
+    setIsShowForm(true);
+    // setDisabledCf(true);
     event.preventDefault();
   }
 
@@ -134,10 +134,7 @@ function ActivityCreate() {
     const prostResponse = await postRecordById(newRecord);
     if (prostResponse.status === 201) {
       console.log(prostResponse.data);
-      setIsChecked(true);
-      setInterval(() => {
-        <Navigate to="/activity-report" />;
-      }, 5000);
+      setIsChecked(true);      
     } else {
       alert("activity is not valid");
     }
@@ -145,7 +142,7 @@ function ActivityCreate() {
     event.preventDefault();
   }
 
-  function actResetFrom(event) {
+  function actResetForm(event) {
     event.preventDefault();
     setAddActivity("");
     setActDate("");
@@ -160,7 +157,20 @@ function ActivityCreate() {
         <NavBar pageTitle="Activity Create" />
 
         <section className="container container-activity-create">
-          <div className="container-css-50">
+          <div className="title-create-mob">
+            <p>Activity Create</p>
+            <Button
+              className="button-cf-mob"
+              type="button"
+              onClick={handleCfClick}
+              disabled={disabledCf}
+            >
+              <i
+                className={`fa ${isShowForm ? "fa-check-circle" : "fa-check"}`}
+              ></i>
+            </Button>
+          </div>
+          <div className="container-cre-50">
             <Input
               className="add-input"
               type="text"
@@ -236,106 +246,110 @@ function ActivityCreate() {
               </div>
             </div>
           </div>
-          <div className="container-act-sel-from " hidden={!isShowFrom}>
-            <div className="middle-font font-large-head  act-create-title">
-              Activity name
-              <div className="button-close" onClick={removeSelect}>
-                <i className="fa fa-plus"></i>
-              </div>
-            </div>
 
-            <div className="act-create ">
-              <div className="act-create-icon ">
-                {Array.isArray(addActivity) &&
-                  addActivity.map((icon, index) => {
-                    return (
-                      <IconAct
-                        key={index}
-                        src={icon.src}
-                        alt={icon.name}
-                        actType={icon.type}
-                        iconName={icon.name}
-                        num={`${icon.id}`}
-                        setSelect={removeSelect}
-                      />
-                    );
-                  })}
+          {/* Form */}
+          <div className="act-form-background container-cre-50" hidden={!isShowForm}>
+            <div className="container-act-sel-form " >
+              <div className="middle-font font-large-head  act-create-title">
+                Activity name
+                <div className="button-close" onClick={removeSelect}>
+                  <i className="fa fa-plus"></i>
+                </div>
               </div>
-              <div className="act-create-input ">
-                <Input
-                  htmlFor="activity-date"
-                  label="activity-date"
-                  style={actDate === "" ? { borderColor: "red" } : null}
-                  type="date"
-                  name="activity-date"
-                  onChange={handleActDate}
-                  value={actDate}
-                >
-                  {actDate === "" ? `please insert activity date` : null}
-                </Input>
-              </div>
-              <div className="act-create-input">
-                <Input
-                  htmlFor="quantity"
-                  label="quantity"
-                  style={actQuantity === "" ? { borderColor: "red" } : null}
-                  type="text"
-                  placeholder="add you quantity"
-                  name="weight"
-                  onChange={addActQuantit}
-                  value={actQuantity}
-                >
-                  {actQuantity === ""
-                    ? `please insert activity quantity `
-                    : null}
-                </Input>
-              </div>
-              <div className="act-create-input">
-                <Input
-                  htmlFor="act-duration-time"
-                  label="duration-time"
-                  placeholder="HH:mm:ss"
-                  style={actDurationTime === "" ? { borderColor: "red" } : null}
-                  onChange={addActDurationTime}
-                  maxLength="8"
-                  type="text"
-                  id="duration-time"
-                  name="act-duration-time"
-                  value={actDurationTime}
-                >
-                  *It takes about 15 minutes or more.
-                </Input>
-              </div>
-              <div className="act-create-button">
-                <Button
-                  type="submit"
-                  value="submit"
-                  onClick={actSubmit}
-                  disabled={actDisabledSubmit}
-                  style={
-                    actDisabledSubmit
-                      ? { backgroundColor: "var( --secondary-icon-color)" }
-                      : null
-                  }
-                >
-                  Save
-                </Button>
 
-                <Button
-                  className="button-reset"
-                  type="reset"
-                  onClick={actResetFrom}
-                  value="Reset"
-                >
-                  cancel
-                </Button>
-                {isChecked ? <Navigate to="/activity-report" /> : null}
+              <div className="act-create ">
+                <div className="act-create-icon ">
+                  {Array.isArray(addActivity) &&
+                    addActivity.map((icon, index) => {
+                      return (
+                        <IconAct
+                          key={index}
+                          src={icon.src}
+                          alt={icon.name}
+                          actType={icon.type}
+                          iconName={icon.name}
+                          num={`${icon.id}`}
+                          setSelect={removeSelect}
+                        />
+                      );
+                    })}
+                </div>
+                <div className="act-create-input ">
+                  <Input
+                    htmlFor="activity-date"
+                    label="activity-date"
+                    style={actDate === "" ? { borderColor: "red" } : null}
+                    type="date"
+                    name="activity-date"
+                    onChange={handleActDate}
+                    value={actDate}
+                  >
+                    {actDate === "" ? `please insert activity date` : null}
+                  </Input>
+                </div>
+                <div className="act-create-input">
+                  <Input
+                    htmlFor="quantity"
+                    label="quantity"
+                    style={actQuantity === "" ? { borderColor: "red" } : null}
+                    type="text"
+                    placeholder="add you quantity"
+                    name="weight"
+                    onChange={addActQuantit}
+                    value={actQuantity}
+                  >
+                    {actQuantity === ""
+                      ? `please insert activity quantity `
+                      : null}
+                  </Input>
+                </div>
+                <div className="act-create-input">
+                  <Input
+                    htmlFor="act-duration-time"
+                    label="duration-time"
+                    placeholder="HH:mm:ss"
+                    style={
+                      actDurationTime === "" ? { borderColor: "red" } : null
+                    }
+                    onChange={addActDurationTime}
+                    maxLength="8"
+                    type="text"
+                    id="duration-time"
+                    name="act-duration-time"
+                    value={actDurationTime}
+                  >
+                    *It takes about 15 minutes or more.
+                  </Input>
+                </div>
+                <div className="act-create-button">
+                  <Button
+                    type="submit"
+                    value="submit"
+                    onClick={actSubmit}
+                    disabled={actDisabledSubmit}
+                    style={
+                      actDisabledSubmit
+                        ? { backgroundColor: "var( --secondary-icon-color)" }
+                        : null
+                    }
+                  >
+                    Save
+                  </Button>
+
+                  <Button
+                    className="button-reset"
+                    type="reset"
+                    onClick={actResetForm}
+                    value="Reset"
+                  >
+                    cancel
+                  </Button>
+                  {isChecked ? <Navigate to="/activity-report" /> : null}
+                </div>
               </div>
             </div>
           </div>
         </section>
-
-        <div className="push"></div>
       </div>
       <Footer />
     </>
