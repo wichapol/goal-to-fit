@@ -79,6 +79,10 @@ hr {
     .menu-icon {
         font-size: 1.2em;
     }
+
+    .menu-name {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -98,5 +102,11 @@ hr {
     .menu-icon {
         font-size: 1.2em;
     }
+
+    .menu-name {
+        display: block;
+    }
+
+
 
 }

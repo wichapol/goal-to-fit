@@ -81,8 +81,9 @@ button:focus {
     }    
 
     .act-type-report {
-        top: -70px;
-        left: 6px;
+        top: -50px;
+        left: 20px;
+        font-size: 1em;
     }
 
     .card-act-data {

@@ -19,7 +19,7 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
   box-shadow: rgba(27, 26, 26, 0.2) 0px 2px 8px 0px;
   width: clamp( 75px ,100%, 100px);
-  aspect-ratio: 1;
+  height: clamp( 75px ,100%, 100px) ;
   padding: 20px;
   position: relative;
 
