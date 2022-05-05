@@ -239,6 +239,7 @@ hr {
 
     .bg-nav {
         box-shadow: none;
+        z-index: 10000;
     }
 
 

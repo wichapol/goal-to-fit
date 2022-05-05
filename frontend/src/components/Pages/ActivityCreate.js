@@ -134,7 +134,7 @@ function ActivityCreate() {
     const prostResponse = await postRecordById(newRecord);
     if (prostResponse.status === 201) {
       console.log(prostResponse.data);
-      setIsChecked(true);      
+      setIsChecked(true);
     } else {
       alert("activity is not valid");
     }
@@ -248,10 +248,13 @@ function ActivityCreate() {
           </div>
 
           {/* Form */}
-          <div className="act-form-background container-cre-50" hidden={!isShowForm}>
-            <div className="container-act-sel-form " >
+          <div
+            className="act-form-background container-cre-50"
+            hidden={!isShowForm}
+          >
+            <div className="container-act-sel-form ">
               <div className="middle-font font-large-head  act-create-title">
-                Activity name
+                Create Activity
                 <div className="button-close" onClick={removeSelect}>
                   <i className="fa fa-plus"></i>
                 </div>
@@ -290,16 +293,16 @@ function ActivityCreate() {
                 <div className="act-create-input">
                   <Input
                     htmlFor="quantity"
-                    label="quantity"
+                    label="Add your achievement "
                     style={actQuantity === "" ? { borderColor: "red" } : null}
                     type="text"
-                    placeholder="add you quantity"
+                    placeholder="cal,km,step,etc. minimal 3 length"
                     name="weight"
                     onChange={addActQuantit}
                     value={actQuantity}
                   >
                     {actQuantity === ""
-                      ? `please insert activity quantity `
+                      ? `please insert activity achievement cal,km,step,etc. minimal 3 length `
                       : null}
                   </Input>
                 </div>
