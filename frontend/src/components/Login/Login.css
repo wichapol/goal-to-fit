@@ -1,6 +1,6 @@
 .section-login{
     /* border: 2px solid rgb(4, 110, 13); */
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -11,9 +11,10 @@
     padding: 0.5rem 0rem;
     font-size: 1rem;
     border: none;
-    /* border-radius: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px; */
+    /* border-radius: 0.5rem;*/
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px; 
     outline: none;
+    border-bottom: 1px solid #9c9c9c;
 }
 
 .container-login{
@@ -77,3 +78,9 @@
     outline: none;
  }
 
+ @media screen and (min-width: 320px) {
+    .section-login{
+        /* border: 2px solid rgb(4, 110, 13); */
+        display: flex;      
+    }
+ }

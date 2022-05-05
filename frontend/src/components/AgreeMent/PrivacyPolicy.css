@@ -26,7 +26,7 @@
 /** Dialog */
 
 .modal-background {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     left: 0;
@@ -35,13 +35,17 @@
   }
   
   .modal-card {
-    padding: 25px 50px 0px 50px;
+    padding: 25px 20px 0px 20px;
     margin: auto;
     display: block;
-    width: 50%;
-    height: 70%;
+    width: 90%;
+    height: 90%;
     background-color: rgb(253, 253, 253);
     border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
   #services-dialog{
     overflow-y: scroll;

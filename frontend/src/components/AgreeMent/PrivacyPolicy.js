@@ -32,7 +32,7 @@ const PrivacyPolicy = ({ dispalyState,  servicesClose }) => {
                         Fusce sollicitudin ut magna eu vulputate. Aliquam eleifend mollis eros eu pellentesque. In maximus arcu non dolor condimentum, at placerat mauris scelerisque. Duis et arcu sapien. Morbi vulputate arcu ante, eget accumsan dolor placerat id. Nulla facilisi. Curabitur vitae nunc ullamcorper, tincidunt elit in, vestibulum tortor. Curabitur dictum sem augue. Cras nisl ante, rutrum vel congue eget, vestibulum et dui. Curabitur euismod placerat leo at hendrerit.
                     </p>
                     <div className="text-center">
-                        <button id="btn-close" className="btn text-center text-center h-40 mt-24 mb-24" onClick={close}>Close</button>
+                        <button id="btn-close" className="btn text-center text-center h-40 mt-1 mb-4" onClick={close}>Close</button>
                     </div>
                 </div>
             </div>

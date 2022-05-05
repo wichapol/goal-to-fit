@@ -37,8 +37,8 @@ const Signup = () => {
 
     return (
         <div>
-            <section className="signup-section">
-                <div className="containe-signup">
+            <section className="container signup-section">
+                <div className="container-signup">
                     <div className="head-signup"></div>
                     <div className="singup">
                         <Title>Sign Up</Title>
