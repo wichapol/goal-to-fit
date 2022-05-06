@@ -189,7 +189,7 @@ const UserForm = () => {
 
   return (
     <>
-      <section className="container container-userfrom ">
+      <section className="container container-userfrom animate__animated animate__fadeIn ">
         <div className="mobile-header-userfrom">
           <p className="ml-2 my-0">Goal to fit</p>
         </div>

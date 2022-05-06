@@ -2,6 +2,38 @@ section {
     margin: 0px;
 }
 
+.loading-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap ;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(250deg, #f0f0f0 , #f6f6f6,#ffffff);
+    background-size: 400% 400%;   
+
+    animation: gradient 15s ease infinite;   
+}
+
+.loading-page p{
+    font-size: 1em;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 50% 0%;
+    }
+
+    50% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 50% 0%;
+    }
+
+}
+
 .container-activity-report {
     display: none;
     justify-content: center;
@@ -366,6 +398,10 @@ section {
 
     .header-act-ls p:first-child {
         display: none;
+    }
+
+    .container-activity-report .act-form-background{
+        z-index: 15000;
     }
 
 }

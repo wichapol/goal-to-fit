@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function NavBar({ pageTitle = "Please Add Pagetitle" }) {
   return (
-    <div className="bg-nav">
+    <div className="bg-nav animate__animated animate__fadeIn">
       {/* <!-- ใส่สี background nav ที่ คลาสนี้ --> */}
       <nav className="container">
         <header className="nav-header ">

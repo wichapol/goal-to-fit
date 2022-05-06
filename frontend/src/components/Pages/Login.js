@@ -12,7 +12,7 @@ const Login = () => {
   
     return (
       <div> 
-          <section className="container section-login">
+          <section className="container section-login animate__animated animate__fadeIn">
                 <div className="container-login"> 
                     <ImageTitle imgSrc={'./img/gtf-logo.png'} classDiv={"head-logo-image_title"}
                     classImg={"icon-logo"} alt={"icon-console"}>

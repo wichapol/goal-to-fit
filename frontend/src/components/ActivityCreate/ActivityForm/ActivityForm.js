@@ -91,8 +91,8 @@ function ActivityForm({ showFrom, closeForm, id }) {
 
   return (
     <section hidden={showFrom}>
-      <div className="act-form-background" >
-        <div className="container-act-form">
+      <div className="act-form-background animate__animated animate__fadeIn" >
+        <div className="container-act-form animate__animated animate__slideInDown ">
           <div className="middle-font font-large-head  act-form-title">
             Activity Edit
             <div className="button-close-edit" onClick={close}>

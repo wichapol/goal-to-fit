@@ -15,7 +15,7 @@ function IconAct({ src,alt,iconName="",setSelect, name ,actType,num }) {
   }
 
   return (
-    <div  className="block-icon" >
+    <div  className="block-icon animate__animated animate__fadeIn" >
       <button className="button-icon" onClick={setSelect} name={name}  >
         <img src={src} alt={alt} className="icon" name={name} />
         <p className="act-type">

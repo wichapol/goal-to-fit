@@ -6,6 +6,7 @@ import Signup from '../Pages/Signup';
 import ActivityCreate from '../Pages/ActivityCreate';
 import UserForm from '../Pages/UserForm';
 import './App.css';
+import 'animate.css';
 
 
 

@@ -37,7 +37,7 @@ const Signup = () => {
 
     return (
         <div>
-            <section className="container signup-section">
+            <section className="container signup-section animate__animated animate__fadeIn">
                 <div className="container-signup">
                     <div className="head-signup"></div>
                     <div className="singup">
