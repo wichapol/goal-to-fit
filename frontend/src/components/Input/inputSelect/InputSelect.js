@@ -82,7 +82,7 @@ const InputSelect = ({ children = "", addUserGoal }) => {
     return (
         <span className="input-select">
             <div >
-                <label className="primary-text-color"
+                <label className="secondary-text-color middle-font"
                     htmlFor={children.toLocaleLowerCase()}
                 >
                     {children}
@@ -96,7 +96,7 @@ const InputSelect = ({ children = "", addUserGoal }) => {
                     }
                 </select>
             </div>
-            <div className=" show-input-gal ">
+            <div className="show-input-gal ">
                 {showInputGoal()}
             </div>
         </span>

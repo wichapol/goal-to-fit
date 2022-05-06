@@ -32,6 +32,7 @@ const UserForm = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [durationTime, setDurationTime] = useState("");
   const [disabledSubmit, setDisabledSubmit] = useState(true);
+  const [isSubmit, setIsSunmit] = useState(false);
 
   // validate username
   let nameToCheck = "";
@@ -71,7 +72,7 @@ const UserForm = () => {
     const toddy = new Date();
 
     const calculateAge = toddy.getFullYear() - birthDate.getFullYear();
-    if (calculateAge <= 12) {
+    if (calculateAge <= 0) {
       setUserAge("");
       return;
     }
@@ -132,7 +133,7 @@ const UserForm = () => {
   // add Duration Time
   function addDurationTime(event) {
     let value = event.target.value;
-    console.log(value);
+
     if (value.length === 2 || value.length === 5) {
       value = value + ":";
     } else if (value.length > 8) {
@@ -140,6 +141,8 @@ const UserForm = () => {
     }
     setDurationTime(value);
   }
+
+  // varidate form
 
   // user userSubmit
   useEffect(() => {
@@ -151,10 +154,14 @@ const UserForm = () => {
     }
   }, [userGoal, allExerciseDay]);
 
+
   function userSubmit(event) {
-    setIsChecked(!isChecked)
-    
+    event.preventDefault();   
+
+    setInterval(setIsSunmit(!isSubmit), 10000);
   }
+
+  // Reset form
 
   function resetFrom(event) {
     event.preventDefault();
@@ -177,13 +184,16 @@ const UserForm = () => {
     setAllExerciseDay([]);
     setDurationTime("");
     setDisabledSubmit(true);
-    setIsChecked(!isChecked);
+    setInterval(setIsChecked(!isChecked), 10000);
   }
 
   return (
     <>
-      <section className="container-userfrom ">
-        <form>
+      <section className="container container-userfrom ">
+        <div className="mobile-header-userfrom">
+          <p className="ml-2 my-0">Goal to fit</p>
+        </div>
+        <form onSubmit={userSubmit}>
           <div className="user-profile secondary-text-color ">
             <ImageTitle
               imgSrc={"./img/gtf-logo.png"}
@@ -194,6 +204,8 @@ const UserForm = () => {
               {userName}
             </ImageTitle>
             <Input
+              htmlFor="create user name"
+              label="Create user name"
               placeholder="Add User Name "
               maxLength="10"
               type="text"
@@ -218,6 +230,7 @@ const UserForm = () => {
               >
                 gender
               </SwitchButton>
+              <p className="p-input primary-text-color">you'r {gender}</p>
             </div>
             <div className="profile-year-of-birth">
               <Input
@@ -284,12 +297,14 @@ const UserForm = () => {
           <div className="goal-date-time">
             <div className="exercise-day">
               <span>
-                <label>Exercise day</label>
+                <label className="secondary-text-color middle-font mb-0">
+                  Exercise day
+                </label>
                 <p
-                  className="primary-text-color"
-                  hidden={allExerciseDay.length > 0 ? { color: "red" } : null}
+                  className="primary-text-color p-input m-0"
+                  hidden={allExerciseDay.length > 0}
                 >
-                  *
+                  * please seclect exercise day
                 </p>
               </span>
               <div className="data-goal">
@@ -299,6 +314,7 @@ const UserForm = () => {
                       key={text.name}
                       name={text.name}
                       value={[text.value]}
+                      data-ate={text.children}
                       onChange={addNewExerciseDay}
                     >
                       {text.children}
@@ -329,16 +345,16 @@ const UserForm = () => {
               <Button
                 type="submit"
                 value="submit"
-                onSubmit={userSubmit}
                 disabled={disabledSubmit}
                 style={
-                    disabledSubmit
-                      ? { backgroundColor: "var( --secondary-icon-color)" }
-                      : null
-                  }
+                  disabledSubmit
+                    ? { backgroundColor: "var( --secondary-icon-color)" }
+                    : null
+                }
               >
                 Save
               </Button>
+              { isSubmit && <Navigate to="/activity-report" />}
             </div>
             <div>
               <Button
@@ -349,7 +365,7 @@ const UserForm = () => {
               >
                 cancel
               </Button>
-              {isChecked ? <Navigate to="/activity-report" /> : null}
+              {isChecked ? <Navigate to="/signup" /> : null}
             </div>
           </div>
         </form>

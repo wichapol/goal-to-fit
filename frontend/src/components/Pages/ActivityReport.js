@@ -14,6 +14,7 @@ import { getRecords } from "../../api";
 // function Component
 
 const ActivityReport = () => {
+  
   const [actCardsResult, setActCardsResult] = useState("");
   const current = new Date();
   const date = `${current.getDate()}/${
@@ -88,12 +89,12 @@ const ActivityReport = () => {
             <div>
               <DonutChart />
             </div>
-            <dip>
+            <div>
               <p className="secondary-text-color font-large-head middle-font mt-3 mb-2 ">
                 Activity lists
               </p>
               <p className="border-Bottom"></p>
-            </dip>
+            </div>
             <div className="act-container">
               <div className="act-lists ">
                 {Array.isArray(actCardsResult) &&

@@ -3,7 +3,7 @@ import "./SwitchButton.css"
 
 
 const SwitchButton = ({ children = "", textLeft = "textLeft", textRight = "textRight",
-    textOnSwitch, classLabel = "display-block", inputName = "", addResul }) => {
+    textOnSwitch, inputName = "", addResul }) => {
     const [ischecked, setIsChecked] = useState(true)
 
     function  handleInputChange() {      
@@ -15,7 +15,7 @@ const SwitchButton = ({ children = "", textLeft = "textLeft", textRight = "textR
 
     return (
         <>
-            <label className={classLabel} htmlFor={children}>{children}</label>
+            <label className={`secondary-text-color middle-font`} htmlFor={children}>{children}</label>
             <section>
                 <label htmlFor={inputName} className="toggle-1">
                     <input type="checkbox" className="toggle-1__input"

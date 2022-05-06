@@ -1,39 +1,38 @@
 .input-select {
     display: flex;
-    flex-direction: row;
+    flex-flow: column wrap;
     gap: 20px;
     justify-content: space-between;
-
+    width: 100%;
 
 }
 
-.input-select div span {
-    display: flex;
+.input-select div {
+   
     flex-direction: column;
+   
+}
+
+.input-select div span {
+   
+    flex-direction: column;
+ 
 }
 
 .input-select select {
     border: 2px solid #929292;
     border-radius: 5px;
     background-color: white;
+    color: #929292;
     font-size: 1em;
+    height: 2em;   
+    width: max-content;
 
 }
 
 
-.input-select input[type="date"],
-input[type="number"],
-input[type="time"],
-input[type="text"] {
-    border: 2px solid #929292;
-    border-radius: 5px;
-    background-color: white;
-    font-size: 1em;
 
-}
-
-.show-input-gal{
-    border: 2px solid bule;
+.show-input-gal{    
     display: flex;
     flex-direction: row;
     justify-content: space-between;

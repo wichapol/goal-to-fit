@@ -6,7 +6,7 @@ const CheckDateBox = ({ children = "Please Add Title",...props }) => {
         <div className="check-date-box ">
             <label htmlFor={children.toLocaleLowerCase()}>
                 <input type="checkbox" {...props} />
-                <p>{children}</p>
+                {/* <p>{children}</p> */}
             </label>            
         </div>
     );
