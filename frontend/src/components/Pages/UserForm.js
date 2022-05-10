@@ -6,7 +6,7 @@ import CheckDateBox from "../CheckDateBox/CheckDateBox";
 import Button from "../Button/Button";
 import Footer from "../Footer/Footer";
 import "../UserForm/UserForm.css";
-import { Navigate } from "react-router-dom";
+import { Navigate, NavLink } from "react-router-dom";
 import InputSelect from "../Input/inputSelect/InputSelect";
 import DATATEST from "./DataToTast/UserTest.json";
 import dataExerciseDay from "./DataToTast/dataExerciseDay.json";
@@ -154,9 +154,8 @@ const UserForm = () => {
     }
   }, [userGoal, allExerciseDay]);
 
-
   function userSubmit(event) {
-    event.preventDefault();   
+    event.preventDefault();
 
     setInterval(setIsSunmit(!isSubmit), 10000);
   }
@@ -192,6 +191,11 @@ const UserForm = () => {
       <section className="container container-userfrom animate__animated animate__fadeIn ">
         <div className="mobile-header-userfrom">
           <p className="ml-2 my-0">Goal to fit</p>
+          <NavLink to="/activity-report">
+            <div className="button-close">
+              <i className="fa fa-plus"></i>
+            </div>
+          </NavLink>
         </div>
         <form onSubmit={userSubmit}>
           <div className="user-profile secondary-text-color ">
@@ -354,7 +358,7 @@ const UserForm = () => {
               >
                 Save
               </Button>
-              { isSubmit && <Navigate to="/activity-report" />}
+              {isSubmit && <Navigate to="/activity-report" />}
             </div>
             <div>
               <Button

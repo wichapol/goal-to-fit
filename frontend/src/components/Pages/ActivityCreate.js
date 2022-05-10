@@ -176,7 +176,7 @@ function ActivityCreate() {
           </p>
         </section>
       ) : (
-        <div className="wrapper ">
+        <div className="wrapper-create">
           <NavBar pageTitle="Activity Create" />
 
           <section className="container container-activity-create animate__animated animate__slideInLeft ">

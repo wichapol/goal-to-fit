@@ -7,6 +7,8 @@ section {
 }
 
 .wrapper-create {
+
+    position: relative;
     min-height: 100vh;
     margin-bottom: -60px;
 
@@ -296,6 +298,12 @@ section {
         display: flex;
     }
 
+    .container-activity-create .act-form-background {
+        position: absolute;
+        top: 0;
+        left: 0;    
+    }
+
 }
 
 @media screen and (min-width: 576px) {
@@ -306,6 +314,9 @@ section {
     .container-act-sel-form {
         width: 450px;
     }
+    .container-activity-create .act-form-background {       
+        z-index: 1;
+    }
 
 }
 
@@ -314,6 +325,11 @@ section {
         display: none;
     }
 
+    .activity-select .button-cf {
+        display: block;
+    }
+
+     
     .container-activity-create {
 
         justify-content: center;
@@ -323,16 +339,7 @@ section {
         margin-top: 60px;
     }
 
-    .activity-select .button-cf {
-        display: block;
-    }
-
-    .container-activity-create .act-form-background {
-        position: static;
-        background-color: transparent;
-        z-index: 1;
-    }
-
+    
     .container-cre-50 {
         width: 50%;
         display: flex;
@@ -341,8 +348,22 @@ section {
         height: inherit;
     }
 
+    .container-activity-create .act-form-background {
+        position: static;
+        background-color: transparent;
+        z-index: 1;
+    }
+
+  
+
     .container-act-sel-form {
         margin-top: 0;
     }
+
+}
+
+@media screen and (min-width: 1200px){
+
+   
 
 }
